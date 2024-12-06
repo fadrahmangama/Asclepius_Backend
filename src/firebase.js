@@ -3,11 +3,7 @@ const { Firestore } = require("@google-cloud/firestore");
 async function storedata(id, data) {
   try {
     // Gunakan kredensial default yang sudah disiapkan oleh ADC
-    const db = new Firestore({
-      databaseId: "submissionmlgc-fadhlur-prediction",
-      keyFilename:
-        "../submissionmlgc-fadhlur-be/submissionmlgc-fadhlur-996706f071a8.json",
-    });
+    const db = new Firestore();
 
     const predictCollection = db.collection("predictions");
     return predictCollection.doc(id).set(data);
