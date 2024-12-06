@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
-ENV MODEL_URL='https://storage.googleapis.com/submissionmlgc-ml-asclepius/model.json'
+ENV PORT=3000
 
-CMD ["npm", "start"]
+ENV MODEL_URL='https://storage.googleapis.com/submissionmlgc-fadhlur/prod-model/submission-model/model.json'
+
+CMD ["npm", "start"]
