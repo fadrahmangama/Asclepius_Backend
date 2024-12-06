@@ -8,7 +8,9 @@ async function storedata(id, data) {
     //   keyFilename:
     //     "../submissionmlgc-fadhlur-be/submissionmlgc-fadhlur-c79f23f1ef38.json",
     // });
-    const db = new Firestore();
+    const db = new Firestore({
+      databaseId: "submissionmlgc-fadhlur-prediction",
+    });
 
     const predictCollection = db.collection("predictions");
     return predictCollection.doc(id).set(data);
@@ -25,7 +27,9 @@ const getHistories = async () => {
     //   keyFilename:
     //     "../submissionmlgc-fadhlur-be/submissionmlgc-fadhlur-c79f23f1ef38.json",
     // });
-    const db = new Firestore();
+    const db = new Firestore({
+      databaseId: "submissionmlgc-fadhlur-prediction",
+    });
     const predictCollection = db.collection("predictions");
 
     const snapshot = await predictCollection.get();
