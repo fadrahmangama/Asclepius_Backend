@@ -37,5 +37,4 @@ const predictCancer = async (imagePath) => {
     throw new Error("Prediction failed");
   }
 };
-
 module.exports = { predictCancer };
