@@ -8,8 +8,6 @@ RUN npm install
 
 COPY . .
 
-ENV PORT=8080
-
 EXPOSE 8080
 
 ENV MODEL_URL='https://storage.googleapis.com/submissionmlgc-ml-asclepius/model.json'
